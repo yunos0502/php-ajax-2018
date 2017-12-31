@@ -1,0 +1,367 @@
+/******** 공통 *********/
+.container { background-color: #E9E9E9; }
+.hid { position: absolute; left: -9999%; width: 1px; height: 1px; overflow: hidden;  font-size: 0; line-height: 0; }
+.lineAdd { border-bottom: 2px solid #FF7500 !important; border-radius: 0px !important; height: 57px; }
+.signWrap .inputGroup li:last-child input.lineAdd { height: 18px !important; }
+a, input, textarea, button { -webkit-tap-highlight-color:transparent; outline: none; } /* 모바일웹, 아이폰 터치 시 탭 하이라이트 제거 */
+
+/******** 공통 : 좋아요&댓글 *********/
+.recipeWrap li ul.recipeResponse, .BestRecipe li ul.recipeResponse { width: 30%; height: auto; padding: 0px; margin-right: 6%; margin-bottom: 4%; text-align: center; float: right; }
+.recipeWrap li ul.recipeResponse li, .BestRecipe li ul.recipeResponse li { width: 38%; height: 100%; margin-right: 12%; display: inline-block; }
+.recipeWrap li ul.recipeResponse li:last-child, .BestRecipe li ul.recipeResponse li:last-child { margin-right: 0px; }
+.recipeWrap li ul.recipeResponse li.favoriteImg, .BestRecipe li ul.recipeResponse li.favoriteImg { background-image: url("../images/ic_favorite@2x.png"); background-repeat: no-repeat; background-size: contain; }
+.recipeWrap li ul.recipeResponse li.commentImg, .BestRecipe li ul.recipeResponse li.commentImg { background-image: url("../images/ic_comment@2x.png"); background-repeat: no-repeat; background-size: contain; }
+.recipeWrap li ul.recipeResponse li a, .BestRecipe li ul.recipeResponse li a { padding-left: 34%; }
+.recipeWrap li ul.recipeResponse span, .BestRecipe li ul.recipeResponse span { text-align: right; font-size: 1.6em; font-weight: normal; line-height: 1.6em; color: #B2B2B2; }
+
+/******** 레시피 *********/
+.recipeWrap > li, .BestRecipe > li { float: left; border-radius: 5px; -webkit-border-radius: 5px; background-color: #fff; width: 100%; height: auto !important; min-height: 100%; margin-bottom: 6%; }
+.recipeWrap li.marginLeft { margin-left: 10px; }
+.recipeWrap div.nullImg { position: relative; width: 100%; height: 0; overflow: hidden; padding-bottom: 100%; background-color: #ccc; border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0;  } /* 레시피 이미지 없는 경우 대체 */
+.recipeWrap li a, .BestRecipe li a { width: 100%; height: auto; display: block; }
+.recipeWrap li a img, .BestRecipe li a img { width: 100%; height: 100%; float: left; border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; }
+.recipeWrap li a .recipeTit, .BestRecipe li a .recipeTit { width: 89%; margin: 4% 6% 3% 5%; text-align: left; line-height: 1.6em; font-size: 1.6em; font-weight: normal; color: #000; float: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.recipeBtnWrap { width: 100%; height: 34px; margin-bottom: 20px; }
+.recipeBtn { width: 182px; height: 30px; border: 1px solid #FF7500; border-radius: 18px; padding: 2px; background-color: #FFF; }
+.recipeBtn li { width: 91px; height: 30px; float: left; }
+.recipeBtn li button, .ui-link { width: 100%; height: 30px; display: block; line-height: 30px; text-align: center; font-size: 14px; font-weight: 400 !important; }
+.selectBtn { background-color: #FF7500; border-radius: 15px; }
+.selectBtn button, .selectBtn :focus, .selectBtn :active, .selectBtn :hover, .selectBtn :visited, .selectBtn a { color: #FFF !important; }
+
+/******** 레시피 뷰 *********/
+.recipeView .wrapper { width: 100%; height: auto; margin: 0; padding: 0; font-size: 13px; color: #585858; overflow: hidden; }
+.recipeView h2 { font-size: 18px; color: #000; letter-spacing: 1.3px; font-weight: bold; float: left; padding-left: 10px; line-height: 21px; }
+.recipeView h4 { width: 324px; height: 24px; line-height: 24px; font-size: 16px; color: #585858; letter-spacing: 1.1px; margin-bottom: 1.41%; padding-left: 31px; }
+
+.recipeViewWrap > section { margin-bottom: 10px; padding-top: 4.8%; background-color: #FFF; }
+.recipeViewWrap > section:last-child { margin-bottom: 0px; }
+.recipeViewWrap > section.viewTop { width: 100%; height: auto; padding-top: 0px; }
+.viewTit { width: 100%; height: 0; padding-bottom: 63.204%; background-color: #000; color: #FFF; position: relative; overflow: hidden; }
+.profilePic, .nickName, .recipeTit, .backColor { width: 85%; position: absolute; top: 0; left: 0; right: 0; margin-left: auto; margin-right: auto; }
+.profilePic { width: 16%; height: 25.32%; border-radius: 100%; margin: 0 auto; margin-top: 10.401%; }
+.profilePic img { width: 100%; }
+.nickName { font-size: 16px; letter-spacing: 1.4px; text-align: center; padding-top: 29.07%; }
+.recipeTit { font-size: 18px; line-height: 19px; letter-spacing: 1.1px; text-align: center; padding-top: 36.8%; padding-bottom: 2.67%; }
+.backColor { display: block; content: ""; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+.follow { width: 80px; height: 30px; position: absolute; top: 71.73%; left: 50%; transform: translateX(-50%); background: url("../images/icFollow@2x.png") no-repeat 0 center; background-size: 80px 30px; }
+.follow a { display: block; }
+.follow span { text-align: center; color: #FFF; line-height: 30px; padding-left: 30px; }
+.viewTxt { width: 78.67%; height: auto; padding: 5.87% 10.67% 8%; }
+.caption { width: 96.612%; margin: 0 auto; text-align: center; letter-spacing: 0.6px; margin-bottom: 7.46%; }
+.recipeTags { text-align: center; display: block; }
+.recipeTags li { margin-right: 7px; display: inline-block; }
+.recipeTags li a:link, .recipeTags li a:visited { color: #FF7500; font-size: 16px; letter-spacing: 1.4px; }
+.recipeMethod { width: 100%; margin: 0 auto; margin-top: 6.78%; min-height: 30px; display: table; }
+.recipeMethod li { float: left; height: 30px; line-height: 30px; padding-left: 12.5%; margin-right: 9%; letter-spacing: 1px; font-size: 14px; }
+.recipeTags li:last-child, .recipeMethod li:last-child { margin-right: 0px; }
+.recipeMethod .timer { background-image: url("../images/icTimer@2x.png"); background-repeat: no-repeat; background-position: 0 center; background-size: 30px; }
+.recipeMethod .division { background-image: url("../images/icPerson@2x.png"); background-repeat: no-repeat; background-position: 0 center; background-size: 30px; }
+.recipeMethod .level { background-image: url("../images/icDifficulty@2x.png"); background-repeat: no-repeat; background-position: 0 center; background-size: 30px; }
+
+.recipeIngredients { width: 100%; height: auto; padding-bottom: 5.335%; }
+.recipeIngredients > div { width: 94.67%; margin: 0 auto; }
+.recipeIngredients > div:first-child { margin-bottom: 4.8%; }
+.sectionTop { position: relative; height: 30px; }
+.recipeIngredients h2 { line-height: 30px; }
+.recipeContent > div { position: relative; margin-bottom: 6.48%; }
+.recipeContent > div:first-child { margin-bottom: 7.045%; }
+.recipeContent > div:last-child { margin-bottom: 0px; }
+.Scale { width: 60px; height: 26px; overflow: hidden; margin-left: 6px; background-image: url("../images/icScale@2x.png"); background-repeat: no-repeat; background-position: 0 center; background-size: 60px; position: absolute; top: 2px; right: 15px; }
+.Scale a, .Scale a:active, .Scale a:link, .Scale a:hover { width: 100%; height: 100%; display: block; }
+.simple, .recipeSimple { width: 66px; height: 26px; background: url("../images/icRectangle1@2x.png") no-repeat center center; background-size: 66px 26px; position: absolute; top: 0; right: 15px; }
+.simpleAfter a { background-color: #FF7500; border-radius : 15px; }
+.simple a, .simple a:active, .simple a:link, .simple a:hover, .recipeSimple a, .recipeSimple a:active, .recipeSimple a:link, .recipeSimple a:hover
+{ width: 66px; height: 26px; display: block; line-height: 27px; text-align: center; font-size: 12px; color: #FF7500; }
+.colorChange { color: #FFF !important; }
+.recipeDivision { width: 97.185%; height: 25px; margin-bottom: 28px; }
+.recipeDivision p { float: left; width: 25%; line-height: 25px; font-size: 16px; color: #585858; letter-spacing: 1.1px; background: url("../images/icPerson2@2x.png") no-repeat -1px center; background-size: 22px; text-indent: 27px; }
+.recipeDivision .cal { float: left; }
+.recipeDivision .cal a { display: inline-block; width: 50px; height: 25px; }
+.recipeDivision .cal a:first-child { background: url("../images/icMinus@2x.png") no-repeat center center; background-size: 50px 25px; }
+.recipeDivision .cal a:last-child { background: url("../images/icPlus@2x.png") no-repeat center center; background-size: 50px 25px; }
+.ingredientsList { width: 100%; height: auto; margin: 0 auto; display: inline-block; }
+.ingredientsEach, .sum { width: 94.03%; height: 30px; line-height: 30px; border-bottom: 1px solid #D8D8D8; padding-left: 5.973%; }
+.sum { width: 89%; height: auto; line-height: 20px; border: 0 none; background: url("../images/icRound@2x.png") no-repeat left center; background-size: 6px; }
+.sum span { color: #585858; }
+.subdivide { float: left; width: 100%; height: 30px; line-height: 30px; }
+.subdivide li { width: 41.27%; height: 100%; padding-right: 4.5%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.subdivide li:first-child { width: 23.4%; }
+.subdivide li:last-child { width: 25.4%; padding-right: 0; }
+.subdivide li { float: left; color: #585858; letter-spacing: 0.5px; }
+.ingredients h4 { background: url("../images/icIngredient@2x.png") no-repeat -1px center; background-size: 24px; }
+.listBox { margin: 0 2.82%; margin-top: 3%; }
+.listBox .sum { margin-left: 2.82%; }
+.season h4 { background: url("../images/icSource@2x.png") no-repeat -1px center; background-size: 24px; }
+.getRecipe h4 { background: url("../images/icImport@2x.png") no-repeat -1px center; background-size: 24px; }
+.getRecipe .ingredientsEach { height: auto; background-position: left 5px; display: inline-block; }
+.season .sum, .ingredients .sum { background-position: left 6px; }
+.getRecipe .subdivide { height: auto; padding-bottom: 7px; }
+.getRecipe .subdivide li { height: auto; letter-spacing: 0.9px; white-space: initial; line-height: 17px; }
+.getRecipe .subdivide li a, .stepImport span a, .sum a { color: #FF7500; border-bottom: 1px solid #FF7500; }
+.resetBtn { background: url("../images/icReset@2x.png") no-repeat; background-size: 40px; width: 40px; height: 40px; border: 0 none; margin: 0 auto; margin-top: 20px; display: block; }
+
+.process { width: 100%; }
+.process .sectionTop { width: 100%; height: 26px; margin: 0 auto; margin-bottom: 6.67%; }
+.process h2 { padding-left: 20px; }
+.stepWrap.stepList1 { border-top: 1px solid #D8D8D8; }
+.stepList1 h4 { padding: 9px 20px; color: #000; font-weight: bold; font-size: 18px; letter-spacing: 1.3px; width: 94.37%; height: 21px; line-height: 21px; margin: 0; }
+.stepWrap.stepList2 { padding: 0 18px 29px 15px; }
+.stepList > div:last-child .stepWrap.stepList2 { padding-bottom: 43px; }
+.stepList2 h4 { width: 24px; height: 24px; line-height: 24px; color: #FFF; background-color: #FF7500; border-radius: 12px; padding: 0; margin: 0; text-align: center; float: left; }
+.stepContent:after { content: ''; display: block; clear: both; }
+.stepContent .imgEx { width: 100%; height: 0; padding-bottom: 63.2%; overflow: hidden; background-color: #000; }
+.stepContent .stepImg { width: 100%; float: left; height: 0; overflow: hidden; padding-bottom: 74.935%; }
+.stepContent img { width: 100%; height: auto; }
+.stepContent p.desc { width: 82.135%; min-height: 17px; height: auto; line-height: 17px; padding: 17px 6.4% 16px 11.47%; font-weight: 600; background: #FFF5EA url("../images/icExplan@2x.png") no-repeat 3% 14px; background-size: 28px; letter-spacing: 1px; float: left; }
+.stepContent .Detail { width: 78.13%; height: auto; padding: 14px 11.735% 43px 10.135%; float: left; text-align: justify; position: relative; }
+.stepList2 p.desc { font-weight: 600; margin-bottom: 10px; padding-left: 34px; }
+.stepList2 .Detail { padding-left: 34px; padding-right: 18px; letter-spacing: 1px; }
+.stepList2 .Detail .Timer { margin-top: 10px; }
+.step:last-child .stepContent > ul { padding-bottom: 60px; border: 0 none; }
+.stepContent > span { width: 82%; height: auto; line-height: 22px; margin-bottom: 10px; letter-spacing: 0.5px; }
+.stepContent p.stepIngredient { width: 89.52%; height: auto; line-height: 23px; padding-left: 10.48%; }
+.stepContent p.stepIngredient.Source, .stepContent p.stepIngredient.Ingredient { background: url("../images/icAllIngredients@2x.png") no-repeat left top; background-size: 28px; }
+.stepContent p.stepIngredient > span { height: 28px; display: inline-block; }
+.stepContent p.stepIngredient span.Import { display: block; }
+span.Import a { color: #FF7500; border-bottom: 1px solid #FF7500; }
+.stepContent p.stepIngredient.Timer { background: url("../images/icRecipeTimer@2x.png") no-repeat left center; background-size: 28px; width: 89.52%; height: 28px; line-height: 28px; margin-bottom: 0; display: block; margin-top: 10px; }
+.timeTit { margin-left: 5px; }
+
+.relationRecipe { width: 93.335%; margin: 0 auto; padding-top: 6px; }
+.relationRecipe h4 { color: #000; padding-left: 7.5px; font-weight: 600; margin-bottom: 15px; }
+.relationRecipe .recipeWrap { width: 100%; min-height: 513px; }
+.relationRecipe .recipeWrap > li { width: 48.575%; }
+.recipeInfo { width: 88.24%; float: left; padding: 10px 10px 9.5px 10px; font-size: 12px; }
+.recipeInfo p { width: 100%; height: 15px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-bottom: 3px; }
+.recipeInfo div { width: 100%; height: 18px; font-family: 'Noto Sans KR'; font-weight: 300; color: #B2B2B2; text-align: right; }
+.recipeInfo div span { padding-left: 15px; line-height: 18px; }
+.recipeInfo div span:first-child { background: url("../images/ic_favorite@2x.png") no-repeat left center; background-size: 13px; margin-right: 6px; }
+.recipeInfo div span:last-child { background: url("../images/ic_comment@2x.png") no-repeat left center; background-size: 13px; }
+
+/******** 로그인 / 회원가입 / 비밀번호 찾기 *********/
+.loginPage.container, .signPage.container { background-color: #FFF; }
+.loginPage .content, .signPage .content { width: 100%; height: auto; margin: 0 auto; }
+.loginPage .wrapper, .signPage .wrapper { width: 100%; padding-top: 23px; padding-bottom: 40px; }
+.loginWrap, .signWrap { width: 88%; height: auto; margin: 0 auto; }
+.loginWrap  .inputGroup li.lineAdd { height: 52px; }
+.signWrap .inputGroup { width: 100%; height: 270px; }
+.signWrap  .inputGroup li:first-child.lineAdd {height: 42px; }
+.inputGroup li { border-bottom: 1px solid #D8D8D8; position: relative; }
+.signWrap .inputGroup li:last-child { border-bottom: 1px solid transparent; height: 58px; }
+.signWrap .inputGroup li:last-child input { height: 19px; }
+.signWrap .inputGroup li:nth-child(1), .signWrap .inputGroup li:nth-child(3) { position: relative; }
+input[type='text'], input[type='password'], input[type='number'], input[type='email'], input[type='tel'] { border: 0 none; box-shadow: none; width: 89.095%; height: 19px; font-size: 16px; color: #BDBDBD; padding: 30px 0 9px 36px; letter-spacing: 1px; text-transform:lowercase; position: relative; }
+input[type='email'] { ime-mode: inactive; }
+input#nickname { background: url("../images/icUsername@2x.png") no-repeat 0 69%; background-size: 22px; letter-spacing: 1px; padding-top: 15px; }
+input#email, input#loginEmail, input#forgot_email { background: url("../images/icEmail@2x.png") no-repeat 0 80%; background-size: 22px; }
+#forgot_email { width: 269px; padding-left: 30px; }
+.emailBtnWrap { width: 100%; height: 38px; padding-top: 18px; }
+/*.signWrap input#nickname { width: 217px; letter-spacing: 0.7px; }*/
+.loginWrap input[type='password'], .loginWrap input[type='email'] { padding-top: 25px; }
+#emailCk, #nickCk, #emailsendCk { width: 70px; height: 38px; border: 1px solid #FF7500; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #FFF; color: #FF7500; font-size: 14px; position: absolute; top: 16px; right: 0; text-align: center; padding: 0; }
+#emailsendCk { width: 77px; color: #FFF; background-color: #FF7500; }
+#emailCk { right: 97px; }
+#emailCk span, #nickCk span { text-align: center; }
+input#pwd, .signWrap input#pwdCheck, input#loginPwd { background: url("../images/icPassword@2x.png") no-repeat 0 80%; background-size: 22px; }
+input#birth { background: url("../images/icBirth@2x.png") no-repeat 0 80%; background-size: 22px; letter-spacing: 2px; width: 37.275%; border-bottom: 1px solid #D8D8D8; float: left; -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important;  border-radius: 0 !important; }
+.confirmTxt { width: 100%; height: 17px; padding: 40px 0; margin: 0 auto; }
+.signWrap .confirmTxt { width: 183px; }
+.signWrap .confirmTxt li a { text-decoration: underline; }
+.confirmTxt li:first-child { float: left; }
+.confirmTxt li:last-child { float: right; }
+.confirmTxt li a { color: #FF7500; font-size: 14px; font-weight: 400; }
+p#loginSubmit, p#pwdSubmit { width: 200px; margin: 0 auto; }
+p#signUpSubmit { width: 130px; margin: 0 auto; }
+p#loginSubmit button, p#signUpSubmit button, p#pwdSubmit button { width: 100%; height: 50px; background-color: #FF7500; border-radius: 6px; color: #FFF; font-size: 16px; font-weight: 400; border: 0 none; letter-spacing: 1px; }
+p#signUpSubmit button { height: 45px; }
+p#loginRemember, p.agree { margin-top: 17px; position: relative; width: 100%; height: 20px; }
+.agreementGroup { margin-top: 48px; margin-bottom: 43px; letter-spacing: 0.9px; }
+
+p.agree:first-child { margin-top: 0; }
+p#loginRemember label, p.agree label { font-size: 14px; color: #303030; font-weight: 400; padding-left: 30px; line-height: 20px; display: inline-block; width: 285px; }
+.agreementGroup a, .agreementGroup a:after { font-size: 14px; color: #FF7500; border-bottom: 1px solid #FF7500; position: absolute; }
+.agreementGroup a.tos { top: 0; left: 29px; }
+.agreementGroup a.privacy { top: 0; left: 108px; }
+p.agree .linkTxt:first-child { padding-left: 58px; }
+p.agree .linkTxt:last-child { padding-left: 116px; }
+input[type='checkbox']:not(old) { width: 100%; height: 20px; opacity: 0; position: absolute; top: 0; left: 0; cursor: pointer; }
+input[type='checkbox']:not(old) + label { display: inline-block; background: url("../images/icCheck@2x.png") no-repeat left center; background-size: 20px; width: 100%; height: 20px; }
+input[type='checkbox']:not(old):checked + label { background: url("../images/icSelected@2x.png") no-repeat left center; background-size: 20px; width: 100%; height: 20px; }
+
+.pwdWrap div { width: 299px; margin: 0 auto; }
+.pwdWrap input { border-bottom: 1px solid #D8D8D8; }
+.pwdtxt { margin: 15px 0 40px 0; padding-left: 25px; background: url('../images/icInfoLogin@2x.png') no-repeat left center; background-size: 21px; color: #999999; font-size: 14px; letter-spacing: 0.6px; }
+.pwdtxt span { vertical-align: text-bottom; }
+
+.infoTxt { position: absolute; color: #FF0000; font-size: 12px; line-height: 15px; left: 26px; bottom: -20px; }
+
+/* 성별체크 */
+.genderGroup { width: 46.67%; height: 15px; display: inline-block; padding: 34px 0 9px 0; float: right; border-bottom: 1px solid #D8D8D8; }
+.genderGroup li { width: 50%; float: left; position: relative; border: 0 none; }
+input[type='radio'] + label { font-size: 16px; color: #BDBDBD; text-align: center; }
+input[type='radio']:not(old) { width: 100%; height: 28px; opacity: 0; position: absolute; cursor: pointer; }
+input[type='radio']:not(old) + label { display: inline-block; width: 100%; height: 28px; }
+input[type='radio']:not(old):checked + label { width: 100%; height: 23px; border-bottom: 2px solid #FF7500; color: #FF7500; }
+
+/******** STORY VIEW *********/
+.storyView.container { background-color: #FFF; font-size: 14px; }
+.storyView .wrapper { width: 100%; padding: 0; }
+.storyViewWrap { width: 100%; height: 100vh; overflow: hidden; }
+.storyView header { width: 92%; height: 5.723%; min-height: 40px; border-bottom: 1px solid #D8D8D8; padding: 2.67% 4%; float: left; }
+.userPic {
+    width: 11.595%;
+    height: 0;
+    padding-bottom: 11.595%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    float: left;
+}
+.userPic img {
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    vertical-align: middle;
+}
+.userNic { color: #000; margin-left: 10px; float: left; height: 100%; line-height: 299%; }
+/*.moreBtn img { width: 24px; vertical-align: middle; }*/
+.storyImg img { max-width: 100%; max-height: 100%; vertical-align: middle; width: 100vw; height: 74.934vw; }
+.swiper-container { width: 100%; height: auto; }
+.swiper-pagination { z-index: 1; }
+.storyWrap { width: 100%; overflow: hidden; }
+.imgOpacity { width: 50px; height: 20px; line-height: 20px; border-radius: 10px; background-color: rgba( 0, 0, 0, 0.5 ); color: #FFF; text-align: center; position: absolute; bottom: 3.56%; left: 50%; transform: translateX(-50%); letter-spacing: -1px; }
+.storyContent { width: 100%; height: 90vh; overflow: auto; }
+.storyTxt { width: 89.87%; padding: 4% 0; margin: 0 auto; }
+.storyWrap .storyTag { margin-bottom: 10px; color: #FF7500; }
+.storyWrap .storyDesc { width: 100%; height: auto; padding-bottom: 7%; color: #585858; }
+
+/*로딩 이미지*/
+.loadingWrap { width: 100%; height: auto; position: fixed; top: 0px; }
+.loading { position: relative; width: 10%; height: 30px; margin: 10px auto; }
+.dot div { position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 5px; height: 5px; margin: auto; border-radius: 2.5px; background-color: #B2B2B2; opacity: 0.2; animation: dot 1s linear infinite; }
+.dot div:nth-child(1) { transform: rotate(0) translateX(10px); animation-delay: 0s; }
+.dot div:nth-child(2) { transform: rotate(45deg) translateX(10px); animation-delay: 0.1s; }
+.dot div:nth-child(3) { transform: rotate(90deg) translateX(10px); animation-delay: 0.2s; }
+.dot div:nth-child(4) { transform: rotate(135deg) translateX(10px); animation-delay: 0.3s; }
+.dot div:nth-child(5) { transform: rotate(180deg) translateX(10px); animation-delay: 0.4s; }
+.dot div:nth-child(6) { transform: rotate(225deg) translateX(10px); animation-delay: 0.5s; }
+.dot div:nth-child(7) { transform: rotate(270deg) translateX(10px); animation-delay: 0.6s; }
+.dot div:nth-child(8) { transform: rotate(315deg) translateX(10px); animation-delay: 0.7s; }
+
+@keyframes dot {
+    0% { opacity: 0.2; }
+    25% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+}
+
+/**     media query     **/
+/**         pc          **/
+@media all and ( min-width:1024px ) and ( max-width:1599px ) {
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse span { font-size: 1.5em; line-height: 1.5em; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit, .BestRecipe li a .recipeTit { font-size: 1.5em; line-height: 1.5em; }
+    /******** 메인 *********/
+    .BestRecipe  li ul.recipeResponse { width: 40%; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 34px; }
+    .BestRecipe li ul.recipeResponse span { font-size: 1.7em; line-height: 1.1em; }
+}
+
+/**       tablet1        **/
+@media all and ( min-width:768px ) and ( max-width:1023px ) {
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse span, .BestRecipe  li ul.recipeResponse span { font-size: 1.3em; line-height: 1.3em; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit, .BestRecipe li a .recipeTit { font-size: 1.3em; line-height: 1.3em; }
+    /******** 메인 *********/
+    .BestRecipe li a .recipeTit { font-size: 1.1em; }
+    .BestRecipe li ul.recipeResponse { height: auto; }
+    .BestRecipe li ul.recipeResponse span { font-size: 1.2em; line-height: 1em; vertical-align: top; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 21px; padding-left: 46%; }
+}
+
+/**       tablet2        **/
+@media all and ( min-width:451px ) and ( max-width:767px ) {
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse { width: 41%; }
+    .recipeWrap li ul.recipeResponse span { font-size: 1.2em; line-height: 1.2em; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit { font-size: 1.2em; line-height: 1.2em; }
+    /******** 메인 *********/
+    .BestRecipe li a .recipeTit { font-size: 0.9em; }
+    .BestRecipe li ul.recipeResponse { width: 41%; height: auto; }
+    .BestRecipe li ul.recipeResponse span { font-size: 1em; line-height: 1em; vertical-align: top; }
+    .BestRecipe li ul.recipeResponse li { margin-right: 6%; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 20px; }
+}
+
+/**       mobile        **/
+@media all and ( min-width:400px ) and ( max-width:450px ) {
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse { width: 50%; }
+    .recipeWrap li ul.recipeResponse li { margin-right: 7%; }
+    .recipeWrap li ul.recipeResponse span { font-size: 1.15em; line-height: 1.15em; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit { font-size: 1.15em; line-height: 1.15em; }
+    /******** 메인 *********/
+    .BestRecipe li a .recipeTit { font-size: 0.8em; line-height: 1.2em; }
+    .BestRecipe li ul.recipeResponse { width: 46%; max-height: 19px; }
+    .BestRecipe li ul.recipeResponse span { font-size: 0.85em; line-height: 1.4em; vertical-align: top; }
+    .BestRecipe li ul.recipeResponse li { margin-right: 6%; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 16px; }
+}
+
+/**       mobile2        **/
+@media  all  and  (  min-width:321px  )  and  (  max-width:399px  ){
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse { width: 50%; }
+    .recipeWrap li ul.recipeResponse li { margin-right: 7%; }
+    .recipeWrap li ul.recipeResponse span { font-size: 1.15em; line-height: 1.15em; vertical-align: bottom; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit { font-size: 1.1em; line-height: 1.5em; }
+    /******** 메인 *********/
+    .BestRecipe li a .recipeTit { font-size: 0.7em; line-height: 1.5em; }
+    .BestRecipe li ul.recipeResponse { width: 46%; max-height: 16px; }
+    .BestRecipe li ul.recipeResponse span { font-size: 0.7em; line-height: 1.3em; vertical-align: top; }
+    .BestRecipe li ul.recipeResponse li { margin-right: 6%; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 14px; }
+}
+
+/**       mobile1        **/
+@media  all  and  (  max-width:320px  ){
+    /******** 공통 : 좋아요&댓글 *********/
+    .recipeWrap li ul.recipeResponse { width: 50%; }
+    .recipeWrap li ul.recipeResponse li { margin-right: 7%; }
+    .recipeWrap li ul.recipeResponse span { font-size: 1.1em; line-height: 1.1em; vertical-align: bottom; }
+    /******** 레시피 *********/
+    .recipeWrap li.marginLeft { margin-left: 2.6%; }
+    .recipeWrap li a .recipeTit { font-size: 1em; line-height: 1.2em; }
+    /******** 레시피 뷰 *********/
+    .recipeMethod li { margin-right: 7%; font-size: 13px; }
+    /******** 메인 *********/
+    .BestRecipe li a .recipeTit { font-size: 0.667em; line-height: 1.5em; margin-bottom: 1%; }
+    .BestRecipe li ul.recipeResponse { width: 48%; max-height: 12px; margin-bottom: 4%; }
+    .BestRecipe li ul.recipeResponse span { font-size: 0.667em; line-height: 1.3em; vertical-align: top; }
+    .BestRecipe li ul.recipeResponse li { margin-right: 6%; }
+    .BestRecipe li ul.recipeResponse li a { max-height: 12px; }
+    /******** 회원가입 *********/
+    .loginWrap, .signWrap { width: 85%; }
+    input[type='text'], input[type='password'], input[type='number'], input[type='email'], input[type='tel'] { width: 100%; font-size: 1.1em; padding-left: 28px; }
+    .genderGroup { width: 46%; }
+    p.agree label, .agreementGroup a, .agreementGroup a:after, input[type='radio'] + label { font-size: 1em; }
+    p.agree .linkTxt:first-child { padding-left: 48px; }
+    p.agree .linkTxt:last-child { padding-left: 100px; }
+    .agreementGroup a.tos { top: 2px; left: 23px; }
+    .agreementGroup a.privacy { top: 2px; left: 90px; }
+    input[type='checkbox']:not(old) + label { background-size: 16px; padding-left: 23px; }
+}

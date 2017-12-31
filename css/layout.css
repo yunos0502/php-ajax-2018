@@ -1,0 +1,7 @@
+/******** 공통 *********/
+.container { width: 100%; height: 100%; }
+.wrapper { width: 94.67%; height: 100%; overflow-x: hidden; margin: 0 auto; padding-top: 10px; }
+
+/******** 레시피 *********/
+.recipeWrap, .recipeView { max-width: 100%; height: auto; }
+.recipeWrap > li { width: 170px; height: 225.5px; margin: 0 0 20px 0; }

@@ -1,0 +1,32 @@
+/******** 폰트 *********/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body { color: #333; font-size: 12px; line-height: 1.3; font-family: 'AppleSDGothicNeo', 'Nanum Gothic', 'Noto Sans KR', 'sans-serif'; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+a:link, a:visited { color: #000; text-decoration: none; }
+a:hover, a:focus { color: #000; text-decoration: none; }
+
+.hid { position: absolute; left: -9999%; width: 1px; height: 1px; overflow: hidden;  font-size: 0; line-height: 0; }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #BDBDBD;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #BDBDBD;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #BDBDBD;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #BDBDBD;
+}
+
+button { cursor: pointer; }
+
+input:focus, button:focus {
+    outline: none;
+}
+
+/* input box color */
+/*input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: #000; }*/
+/*input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }*/
