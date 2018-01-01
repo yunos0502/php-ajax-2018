@@ -2,7 +2,6 @@
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $RecipeSerial   = isset($_GET['RecipeSerial']) ? $_GET['RecipeSerial'] : 0;
-//$RecipeSerial   = 197;
 $listType       = isset($_GET['listType']) ? $_GET['listType'] : 'original';
 $ratio          = isset($_GET['ratio']) ? $_GET['ratio'] : 1;
 
@@ -114,18 +113,7 @@ for ($i = 0; $i < count($StepRows); $i++) {
     $eachServing[]  = ((float)($oneServing[$i]) * (float)($serving)) * (float)($ratio);
     $oneWeight[]    = (float)($basicWeight[$i]) / floatval($StepRows[0]['Servings']); //1인분 Weight 계산
     $eachWeight[]   = ((float)($basicWeight[$i]) * (float)($serving)) * (float)($ratio);
-//    $amount[$i] = explode('.', round($eachServing[$i], 1));
-
-//    if($weightRows[$i]['Unit'] == '개') {  // 소수 -> 분수
-//        if(count($amount[$i]) == 2) {
-//            $eachAmount = 1 .'/'. round(10/$amount[$i][1]);
-//
-//            if($eachAmount == '1/1') $eachAmount = '1';
-//            if($amount[$i][0] > 0) $eachAmount = $amount[$i][0].'+'.$eachAmount;
-//        }
-//    }else {
     $roundAmount    = round($eachServing[$i], 1);
-//    }
     $weight         = ($StepRows[$i]['ItemWeightValue'] > 0) ? '<strong class="weight"> ' . round($eachWeight[$i], 1) . '</strong>g' : '';
     $title          = ($StepRows[$i]['ItemType'] == 4) ? '<a href="#">' . $StepRows[$i]['Title'] . '</a>' : $StepRows[$i]['Title'];
     $eachAmount     = (!$StepRows[$i]['Amount']) ? '<span class="amount">' . $StepRows[$i]['Amount'] . '</span>'  : '<span class="amount">' . $roundAmount . '</span>' . $StepRows[$i]['Unit'];
@@ -213,7 +201,6 @@ while (list($key, $value) = each($StepSub)) {
 for($i = 0; $i < count($InfoRows); $i++) {
     for($j = 0; $j < count($InfoRows); $j++) {
         $nullImg    = ($InfoRows[$j]['RM_PictureRectangle'] == NULL) ? '' : '<div class="stepImg"><img src="https://s3.ap-northeast-2.amazonaws.com/cookplay-recipe/' . $InfoRows[$j]['RM_PictureRectangle'] . '"></div>';
-//            $addClass = (!$StepLine[$j]) ? '' : $StepType[$StepRows[$i]['ItemType']];
         $addClass   = (!$StepLine[$j]) ? '' : $StepType[0];
 
         if ($listType == 'original') {

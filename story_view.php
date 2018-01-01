@@ -54,7 +54,6 @@
 
         $('.storyImgBox').on('click', '.storyImg', function () {
             var num = parseInt($(this).index()) + 1;
-            // window.location.href = "story_photo.php?StorySerial="+param+"#slide"+num;
             window.open("story_photo.php?StorySerial="+param+"#slide"+num);
         });
     });

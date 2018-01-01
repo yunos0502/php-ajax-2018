@@ -1,7 +1,6 @@
 <?php
 $RecipeSerial   = isset($_GET['RecipeSerial']) ? $_GET['RecipeSerial'] : 0;
 $ListData       = isset($_GET['range']) ? $_GET['range'] : '';
-//$page       = isset($_GET['page']) ? $_GET['page'] : '';
 $UserID         = date("YmdHis");
 
 $mysql_hostname = '';
@@ -14,12 +13,6 @@ $mysql_charset = 'utf8';
 //1. DB 연결
 $connect = @mysqli_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mysql_password);
 
-//if(!$connect){
-//    echo '[연결실패] : '.mysqli_error().'<br>';
-//    die('MySQL 서버에 연결할 수 없습니다.');
-//} else {
-//    echo '[연결성공]<br>';
-//}
 //2. DB 선택
 @mysqli_select_db($connect, $mysql_database) or die('DB 선택 실패');
 

@@ -9,12 +9,10 @@
         self.close();
     }
 
-//    emailConfirm('ok');
 </script>
 
 <?php
 $user = base64_decode($_GET['user']);
-//$user = 'yyy@test.com';
 
 $mysql_hostname = '';
 $mysql_username = '';

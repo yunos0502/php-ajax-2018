@@ -2,14 +2,8 @@
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $RecipeSerial   = isset($_GET['RecipeSerial']) ? $_GET['RecipeSerial'] : '';
-//$RecipeSerial   = 214;
 $loginUser   = isset($_GET['loginUser']) ? $_GET['loginUser'] : '';
-//$loginUser = 3;
 $followClick = $_GET['followClick'];
-//$followClick = '';
-//$followClick = 'Click';
-//if($followClick == 'Click')     $click = 1;
-//if($followClick == 'unClick')   $click = 0;
 
 $mysql_hostname = '';
 $mysql_username = '';
